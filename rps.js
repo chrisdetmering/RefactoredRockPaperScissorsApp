@@ -30,15 +30,6 @@ function cpuChoice(){
     return options[randomIndex];
 }
 
-// function determineWin(user, comp){
-//     if(user === comp) return 'draw';
-//     const a = getIndex(user);
-//     const b = getIndex(comp);
-//     if((a - b + 3) % 3 == 1) return 'You win!';
-//     else return 'You lose';
-        
-// }
-
 function determineWin(user, comp){
     let a = getIndex(user);
     let b = getIndex(comp);
