@@ -47,7 +47,7 @@ function determineWin(user, comp){
         return 'draw';
     }
 
-    if((a - b + 3) % 3 == 1) {  //stack overflow ftw
+    if((a - b + 3) % 3 == 1) {  //internet ftw!
         return 'You win!';
     } else {
         return 'You lose';
