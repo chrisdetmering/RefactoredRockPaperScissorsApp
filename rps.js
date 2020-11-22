@@ -7,7 +7,7 @@ const compResult = document.querySelector('.display-result p');
 // listeners
 
 for(let i = 0; i < gameButtons.length; i++){
-    gameButtons[i].addEventListener('click', userChoice);   //
+    gameButtons[i].addEventListener('click', userChoice);   
 }
 
 //global variable for rock paper scissors game. string array
