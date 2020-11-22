@@ -7,7 +7,7 @@ const compResult = document.querySelector('.display-result p');
 // listeners
 
 for(let i = 0; i < gameButtons.length; i++){
-    gameButtons[i].addEventListener('click', userChoice);   
+    gameButtons[i].addEventListener('click', userChoice);  
 }
 
 //global variable for rock paper scissors game. string array
@@ -20,14 +20,14 @@ function userChoice(event){
     const choice = event.target.dataset.choice;  // using event.target but specifically targetting the choice of the user.
     //console.log(choice);  // displays the data of the variable
     const compChoice = cpuChoice(); // 
-    const result = determineWin(choice, compChoice); // 
-    displayResult.textContent = result; //store info into result variable
+    const result = determineWin(choice, compChoice); 
+    displayResult.textContent = result; // using selector displayResult to display the result on html
     compResult.textContent = "cpu choose: " + compChoice; // concatinating the compResult and displaying using HTML textContent property.
 }
 
 
 function cpuChoice(){    // creating function for selecting computers choice 
-    const randomIndex = Math.floor(Math.random() * options.length); // get the global variable option and use the length property to select cpu pick
+    const randomIndex = Math.floor(Math.random() * options.length); // get the global variable options and use the length property to select cpu pick
     return options[randomIndex];  // returns whatever the randomIndex option was selected. rock , paper, scissor.
 }
 
@@ -46,11 +46,13 @@ function determineWin(user, comp){
     if(user === comp){
         return 'draw';
     }
-    if((a - b + 3) % 3 == 1){ // thank god for the internet lol 
+
+    if((a - b + 3) % 3 == 1) {  //stack overflow ftw
         return 'You win!';
     } else {
         return 'You lose';
     }
 }
+
 
 
