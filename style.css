@@ -43,7 +43,7 @@ button {
     border-color: ghostwhite;
 }
 
-.rpsButtons {
+.rps-buttons {
     display: flex;
     justify-content: center;
     align-content: center;
